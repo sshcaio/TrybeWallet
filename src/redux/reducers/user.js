@@ -1,4 +1,4 @@
-import { USER } from "../actions/index";
+import { USER } from '../actions/index';
 
 const INITIAL_STATE = {
   user: '',
@@ -6,13 +6,13 @@ const INITIAL_STATE = {
 
 function userReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
-    case USER:
-      return {
-        ...state,
-        user: action.payload,
-      }
-    default:
-      return state;
+  case USER:
+    return {
+      ...state,
+      user: action.payload,
+    };
+  default:
+    return state;
   }
 }
 
