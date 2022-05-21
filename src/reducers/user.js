@@ -1,7 +1,7 @@
 import { USER } from '../actions/index';
 
 const INITIAL_STATE = {
-  user: '',
+  email: '',
 };
 
 function userReducer(state = INITIAL_STATE, action) {
@@ -9,7 +9,7 @@ function userReducer(state = INITIAL_STATE, action) {
   case USER:
     return {
       ...state,
-      user: action.payload,
+      email: action.payload.email,
     };
   default:
     return state;

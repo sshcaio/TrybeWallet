@@ -1,7 +1,8 @@
 import { WALLET } from '../actions/index';
 
 const INITIAL_STATE = {
-  wallet: '',
+  currencies: [],
+  expenses: [],
 };
 
 function walletReducer(state = INITIAL_STATE, action) {
@@ -9,7 +10,8 @@ function walletReducer(state = INITIAL_STATE, action) {
   case WALLET:
     return {
       ...state,
-      wallet: action.payload,
+      currencies: action.payload.currencies,
+      expenses: action.payload.expenses,
     };
   default:
     return state;
