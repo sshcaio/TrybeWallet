@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { emailToStore } from '../actions';
 
@@ -58,7 +59,7 @@ class Login extends Component {
               onChange={ this.saveState }
               data-testid="email-input"
               name="email"
-              isRequired
+              isrequired="true"
             />
           </label>
           <br />
@@ -71,7 +72,7 @@ class Login extends Component {
               onChange={ this.saveState }
               data-testid="password-input"
               name="password"
-              isRequired
+              isrequired="true"
             />
           </label>
           <br />
