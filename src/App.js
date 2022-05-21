@@ -7,20 +7,20 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-        <div className="App">
-          <Switch>
-            <Route
-              exact
-              path="/"
-              component={ Login }
-            />
-            <Route
-              exact
-              path="/carteira"
-              component={ Wallet }
-            />
-          </Switch>
-        </div>
+      <div className="App">
+        <Switch>
+          <Route
+            exact
+            path="/"
+            component={ Login }
+          />
+          <Route
+            exact
+            path="/carteira"
+            component={ Wallet }
+          />
+        </Switch>
+      </div>
     );
   }
 }

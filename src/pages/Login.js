@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { emailToStore } from '../actions';
 import { connect } from 'react-redux';
+import { emailToStore } from '../actions';
 
 class Login extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       email: '',
       password: '',
       disable: true,
-    }
+    };
   }
 
   validateButton = () => {
@@ -38,7 +38,7 @@ class Login extends Component {
     const { history, saveEmailToStore } = this.props;
     const { email } = this.state;
     saveEmailToStore({
-      email
+      email,
     });
     history.push('/carteira');
   }
@@ -90,10 +90,12 @@ class Login extends Component {
 }
 
 Login.propTypes = {
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
+  saveEmailToStore: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  saveEmailToStore: (email) => dispatch(emailToStore(email))
-})
+  saveEmailToStore: (email) => dispatch(emailToStore(email)),
+});
 
 export default connect(null, mapDispatchToProps)(Login);

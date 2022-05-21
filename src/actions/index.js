@@ -9,5 +9,5 @@ export const WALLET = 'WALLET';
 
 export const walletToStore = (email) => ({
   type: WALLET,
-  payload: { ...email }
+  payload: { ...email },
 });
