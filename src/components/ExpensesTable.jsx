@@ -33,7 +33,7 @@ class ExpensesTable extends Component {
               <td>{ expenseAdding(e, e.currency).toFixed(2) }</td>
               <td>Real</td>
             </tr>
-            ))}
+          ))}
         </tbody>
       </table>
     );
