@@ -1,26 +1,16 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { fetchAPI } from '../actions';
 import Header from '../components/Header';
+import ExpensesForm from '../components/ExpensesForm';
 
 class Wallet extends Component {
-  componentDidMount = async () => {
-    const { dispatch } = this.props;
-    dispatch(fetchAPI());
-  }
-
   render() {
     return (
       <div>
         <Header />
+        <ExpensesForm />
       </div>
     );
   }
 }
 
-Wallet.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-};
-
-export default connect()(Wallet);
+export default Wallet;
