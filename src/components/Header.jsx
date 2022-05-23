@@ -8,7 +8,7 @@ class Header extends Component {
     const { email, expenses } = this.props;
     let totalExpense = 0;
     expenses.forEach((e) => {
-      const add = ExpenseAdding(e);
+      const add = ExpenseAdding(e, e.currency);
       totalExpense += add;
     });
     return (

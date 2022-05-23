@@ -52,7 +52,7 @@ class ExpensesForm extends Component {
     const payment = [firstMethod, 'Cartão de crédito', 'Cartão de débito'];
     const tagList = [firstTag, 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
     return (
-      <header>
+      <section>
         <label htmlFor="ExpenseValue">
           {'Valor: '}
           <input
@@ -126,7 +126,7 @@ class ExpensesForm extends Component {
         >
           Adicionar despesa
         </button>
-      </header>
+      </section>
     );
   }
 }
