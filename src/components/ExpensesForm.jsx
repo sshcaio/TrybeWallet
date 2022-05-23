@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchCurrenciesAPI, fetchPriceAPI } from '../actions';
+import { firstCurrency, firstMethod, firstTag } from '../helpers/constants';
 
 class ExpensesForm extends Component {
   constructor() {
@@ -10,15 +11,11 @@ class ExpensesForm extends Component {
       id: 0,
       value: 0,
       description: '',
-      currency: this.firstCurrency,
-      method: this.firstMethod,
-      tag: this.firstTag,
+      currency: firstCurrency,
+      method: firstMethod,
+      tag: firstTag,
     };
   }
-
-  firstTag = 'Alimentação';
-  firstMethod = 'Dinheiro';
-  firstCurrency = 'USD';
 
   componentDidMount = async () => {
     const { dispatch } = this.props;
@@ -43,17 +40,17 @@ class ExpensesForm extends Component {
       id: newID,
       value: 0,
       description: '',
-      currency: this.firstCurrency,
-      method: this.firstMethod,
-      tag: this.firstTag,
+      currency: firstCurrency,
+      method: firstMethod,
+      tag: firstTag,
     });
   }
 
   render() {
     const { value, description, currency, method, tag } = this.state;
     const { currencies } = this.props;
-    const payment = [this.firstMethod, 'Cartão de crédito', 'Cartão de débito'];
-    const tagList = [this.firstTag, 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
+    const payment = [firstMethod, 'Cartão de crédito', 'Cartão de débito'];
+    const tagList = [firstTag, 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
     return (
       <header>
         <label htmlFor="ExpenseValue">
