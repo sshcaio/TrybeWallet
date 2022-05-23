@@ -5,16 +5,20 @@ import { fetchCurrenciesAPI, fetchPriceAPI } from '../actions';
 
 class ExpensesForm extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       id: 0,
       value: 0,
       description: '',
-      currency: 'USD',
-      method: 'Dinheiro',
-      tag: 'Alimentação',
-    }
+      currency: this.firstCurrency,
+      method: this.firstMethod,
+      tag: this.firstTag,
+    };
   }
+
+  firstTag = 'Alimentação';
+  firstMethod = 'Dinheiro';
+  firstCurrency = 'USD';
 
   componentDidMount = async () => {
     const { dispatch } = this.props;
@@ -27,7 +31,7 @@ class ExpensesForm extends Component {
   }
 
   storeWrite = async () => {
-    const { id, value, description, currency, method, tag, } = this.state;
+    const { id, value, description, currency, method, tag } = this.state;
     const saved = { id, value, description, currency, method, tag };
 
     const { dispatch } = this.props;
@@ -39,21 +43,21 @@ class ExpensesForm extends Component {
       id: newID,
       value: 0,
       description: '',
-      currency: 'USD',
-      method: 'Dinheiro',
-      tag: 'Alimentação',
+      currency: this.firstCurrency,
+      method: this.firstMethod,
+      tag: this.firstTag,
     });
   }
 
   render() {
-    const { value, description, currency, method, tag, } = this.state;
+    const { value, description, currency, method, tag } = this.state;
     const { currencies } = this.props;
-    const payment = ['Dinheiro', 'Cartão de crédito', 'Cartão de débito'];
-    const tagList = ['Alimentação', 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
+    const payment = [this.firstMethod, 'Cartão de crédito', 'Cartão de débito'];
+    const tagList = [this.firstTag, 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
     return (
       <header>
         <label htmlFor="ExpenseValue">
-          {`Valor: `}
+          {'Valor: '}
           <input
             type="number"
             name="value"
@@ -64,7 +68,7 @@ class ExpensesForm extends Component {
           />
         </label>
         <label htmlFor="CurrencySelect">
-          {`Moeda: `}
+          {'Moeda: '}
           <select
             name="currency"
             value={ currency }
@@ -78,7 +82,7 @@ class ExpensesForm extends Component {
           </select>
         </label>
         <label htmlFor="PaymentMethod">
-          {`Método de pagamento: `}
+          {'Método de pagamento: '}
           <select
             name="method"
             value={ method }
@@ -93,7 +97,7 @@ class ExpensesForm extends Component {
           </select>
         </label>
         <label htmlFor="ExpenseTag">
-          {`Categoria: `}
+          {'Categoria: '}
           <select
             name="tag"
             value={ tag }
@@ -108,7 +112,7 @@ class ExpensesForm extends Component {
           </select>
         </label>
         <label htmlFor="ExpenseDescription">
-          {`Descrição: `}
+          {'Descrição: '}
           <input
             type="text"
             name="description"
@@ -123,7 +127,7 @@ class ExpensesForm extends Component {
           id="SubmitExpense"
           onClick={ this.storeWrite }
         >
-          {`Adicionar despesa`}
+          Adicionar despesa
         </button>
       </header>
     );

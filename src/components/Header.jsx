@@ -8,7 +8,7 @@ class Header extends Component {
     const { email, expenses } = this.props;
     let totalExpense = 0;
     expenses.forEach((e) => {
-      const add = ExpenseAdding(e)
+      const add = ExpenseAdding(e);
       totalExpense += add;
     });
     return (
@@ -23,6 +23,7 @@ class Header extends Component {
 
 Header.propTypes = {
   email: PropTypes.string.isRequired,
+  expeses: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
 };
 
 const mapStateToProps = (rootReducer) => ({
