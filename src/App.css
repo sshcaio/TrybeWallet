@@ -1,46 +1,157 @@
 body {
-  background-color: #282c34;
+  box-sizing: border-box;
+  background-color: #1e2128;
   color: aliceblue;
+  height: 100vh;
+  width: 100vw;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
 }
 
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media ( prefers-reduced-motion : no-preference ) {
-
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  align-items: center;
-  background-color: #282c34;
-  color: white;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
   justify-content: center;
-  min-height: 100vh;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* LOGIN FORM BOX */
+
+.FormBox {
+  box-sizing: border-box;
+  background-color: #282c34;
+  padding: 24px;
+  border-radius: 12px;
+  filter: drop-shadow(5px 5px 10px #00000040);
+}
+.FormBox h2 {
+  font-size: 250%;
+	font-family: "Lato", sans-serif;
+  color: aliceblue;
+  text-align: center;
+}
+.Form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 120px;
+}
+.Form label {
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
+}
+.Form label p {
+  font-size: 120%;
+	font-family: "Lato", sans-serif;
+  margin: 0px;
+  margin-bottom: 4px;
+  margin-left: -8px;
+}
+.Form label {
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
 }
 
-@keyframes App-logo-spin {
+/* LOGIN FORM INPUT */
 
-  from {
-    transform: rotate(0deg);
-  }
+.Form input {
+  align-self: center;
+  width: 100%;
+  margin-top: 2%;
+  padding: 15px;
+  font-size: 16px;
+	font-family: "Lato", sans-serif;
+  color: #61656a;
+  background-color: #1e2128;
+  outline: none;
+  border: none;
+  border-radius: 0px 12px 12px 12px;
+  filter: drop-shadow(3px 3px 5px #0000001c);
+	box-shadow:inset 0px 1px 0px 0px #3c40457a;
+}
+.Form input:focus {
+  transform: translateX(-2px);
+  border-radius: 12px 12px 12px 0px;
+  background-color: #3c4045;
+  color: #101116;
+	box-shadow:inset 1px 0px 1px 1px #1e2128b2;
+}
+.Form input::-webkit-input-placeholder {
+  color: #3c4045;
+  opacity: 1;
+}
+.Form input:-moz-placeholder {
+  color: #3c4045;
+  opacity: 1;
+}
+.Form input::-moz-placeholder {
+  color: #3c4045;
+  opacity: 1;
+}
+.Form input:focus::-webkit-input-placeholder {
+  color: #1e2128;
+  opacity: 1;
+}
+.Form input:focus:-moz-placeholder {
+  color: #1e2128;
+  opacity: 1;
+}
+.Form input:focus::-moz-placeholder {
+  color: #1e2128;
+  opacity: 1;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+/* LOGIN FORM BUTTON */
+
+.Form button {
+	box-shadow:inset 0px 1px 0px 0px #3c40457a;
+	background-color:#1e2128;
+	border-radius: 0px 6px 6px 6px;
+	border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:aliceblue;
+	font-family: "Lato", sans-serif;
+	font-size:14px;
+  font-weight: 600;
+	padding:12px 36px;
+  margin-top: 18px;
+	text-decoration:none;
+  filter: drop-shadow(3px 3px 5px #0000001c);
+}
+.Form button:hover {
+  background-color:#3c4045;
+  color:#1e2128;
+}
+.Form button:disabled {
+  background-color:#949494;
+  color:#b5b5b5;
+}
+
+/* WALLET PAGE */
+
+.Wallet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+}
+
+.TopWallet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2px;
+  background-color: #61656a;
+  color: aliceblue;
+  padding: 18px;
 }

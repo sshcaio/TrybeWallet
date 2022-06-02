@@ -1,4 +1,4 @@
-import { GET_CURRENCIES, GET_EXPENSE } from '../actions/index';
+import { GET_CURRENCIES, GET_EXPENSE } from '../actions/actions';
 
 const INITIAL_STATE = {
   currencies: [],

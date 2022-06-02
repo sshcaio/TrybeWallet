@@ -1,0 +1,35 @@
+header {
+	font-family: "Lato", sans-serif;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color:#3c4045;
+	box-shadow:inset 1px 0px 1px 1px #1e2128b2;
+  color:aliceblue;
+  width: 100vw;
+  height: 72px;
+}
+
+.HeaderTitle {
+  font-size: small;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.TotalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.TotalExpenses {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TotalExpenses div {
+  margin-left: 4px;
+}

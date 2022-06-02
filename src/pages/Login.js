@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { emailToStore } from '../actions';
+import { emailToStore } from '../redux/actions/actions';
+import '../App.css';
 
 class Login extends Component {
   constructor() {
@@ -48,10 +49,10 @@ class Login extends Component {
     const { email, password, disable } = this.state;
     return (
       <div className="FormBox">
-        <fieldset className="Form">
-          <legend>Login:</legend>
+        <h2>Login</h2>
+        <form className="Form">
           <label htmlFor="EmailInput">
-            Email
+            <p>Email:</p>
             <input
               id="EmailInput"
               type="email"
@@ -59,12 +60,14 @@ class Login extends Component {
               onChange={ this.saveState }
               data-testid="email-input"
               name="email"
+              placeholder="Type your email"
+              autocomplete="off"
               isrequired="true"
             />
           </label>
           <br />
           <label htmlFor="PasswordInput">
-            Password
+            <p>Password:</p>
             <input
               id="PasswordInput"
               type="password"
@@ -72,6 +75,8 @@ class Login extends Component {
               onChange={ this.saveState }
               data-testid="password-input"
               name="password"
+              placeholder="Type your password"
+              autocomplete="off"
               isrequired="true"
             />
           </label>
@@ -84,7 +89,7 @@ class Login extends Component {
           >
             Entrar
           </button>
-        </fieldset>
+        </form>
       </div>
     );
   }
