@@ -21,6 +21,10 @@ class Header extends Component {
             { email ? email : loginError }
           </div>
         </div>
+        <div className="AppTitle">
+          <span>trybe</span>
+          <span id="walletHalf">wallet</span>
+        </div>
         <div className="TotalContainer">
           <div className="HeaderTitle">Total expenses</div>
           <div className="TotalExpenses">

@@ -4,13 +4,14 @@ import { connect } from 'react-redux';
 import { fetchCurrenciesAPI, fetchPriceAPI } from '../../redux/actions/actions';
 import { firstCurrency, firstMethod, firstTag } from '../../helpers/constants';
 import '../../App.css'
+import './ExpensesForm.css'
 
 class ExpensesForm extends Component {
   constructor() {
     super();
     this.state = {
       id: 0,
-      value: 0,
+      value: '',
       description: '',
       currency: firstCurrency,
       method: firstMethod,
@@ -39,7 +40,7 @@ class ExpensesForm extends Component {
 
     this.setState({
       id: newID,
-      value: 0,
+      value: '',
       description: '',
       currency: firstCurrency,
       method: firstMethod,
@@ -54,75 +55,72 @@ class ExpensesForm extends Component {
     const tagList = [firstTag, 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
     return (
       <section className="TopWallet">
-        <form className="Form">
-          <label htmlFor="ExpenseValue">
-            {'Valor: '}
-            <input
-              type="number"
-              name="value"
-              value={ value }
-              id="ExpenseValue"
-              onChange={ this.stateWrite }
-              data-testid="value-input"
-            />
-          </label>
-          <label htmlFor="CurrencySelect">
-            {'Moeda: '}
-            <select
-              name="currency"
-              value={ currency }
-              id="CurrencySelect"
-              className="CurrencySelect"
-              onChange={ this.stateWrite }
-            >
-              {currencies.map((e) => (
-                <option value={ e } key={ e }>{ e }</option>
-              ))}
-            </select>
-          </label>
-          <label htmlFor="PaymentMethod">
-            {'Método de pagamento: '}
-            <select
-              name="method"
-              value={ method }
-              id="PaymentMethod"
-              className="PaymentMethod"
-              onChange={ this.stateWrite }
-              data-testid="method-input"
-            >
-              {payment.map((e) => (
-                <option value={ e } key={ e }>{ e }</option>
-              ))}
-            </select>
-          </label>
-          <label htmlFor="ExpenseTag">
-            {'Categoria: '}
-            <select
-              name="tag"
-              value={ tag }
-              id="ExpenseTag"
-              className="ExpenseTag"
-              onChange={ this.stateWrite }
-              data-testid="tag-input"
-            >
-              {tagList.map((e) => (
-                <option value={ e } key={ e }>{ e }</option>
-              ))}
-            </select>
-          </label>
-          <label htmlFor="ExpenseDescription">
-            {'Descrição: '}
-            <input
-              type="text"
-              name="description"
-              value={ description }
-              id="ExpenseDescription"
-              onChange={ this.stateWrite }
-              data-testid="description-input"
-            />
-          </label>
+        <form className="Form ExpenseForm">
+            <label htmlFor="ExpenseValue">
+              <p>Valor</p>
+              <input
+                type="text"
+                name="value"
+                value={ value }
+                id="ExpenseValue"
+                onChange={ this.stateWrite }
+                data-testid="value-input"
+              />
+            </label>
+            <label className="CurrencySelect" htmlFor="CurrencySelect">
+              <p>Moeda</p>
+              <select
+                name="currency"
+                value={ currency }
+                id="CurrencySelect"
+                onChange={ this.stateWrite }
+              >
+                {currencies.map((e) => (
+                  <option value={ e } key={ e }>{ e }</option>
+                ))}
+              </select>
+            </label>
+            <label className="PaymentMethod" htmlFor="PaymentMethod">
+            <p>Método de pagamento</p>
+              <select
+                name="method"
+                value={ method }
+                id="PaymentMethod"
+                onChange={ this.stateWrite }
+                data-testid="method-input"
+              >
+                {payment.map((e) => (
+                  <option value={ e } key={ e }>{ e }</option>
+                ))}
+              </select>
+            </label>
+            <label className="ExpenseTag" htmlFor="ExpenseTag">
+              <p>Categoria</p>
+              <select
+                name="tag"
+                value={ tag }
+                id="ExpenseTag"
+                onChange={ this.stateWrite }
+                data-testid="tag-input"
+              >
+                {tagList.map((e) => (
+                  <option value={ e } key={ e }>{ e }</option>
+                ))}
+              </select>
+            </label>
+            <label htmlFor="ExpenseDescription">
+              <p>Descrição</p>
+              <input
+                type="text"
+                name="description"
+                value={ description }
+                id="ExpenseDescription"
+                onChange={ this.stateWrite }
+                data-testid="description-input"
+              />
+            </label>
           <button
-            type="submit"
+            type="button"
             id="SubmitExpense"
             onClick={ this.storeWrite }
           >

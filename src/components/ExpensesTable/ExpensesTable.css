@@ -1,0 +1,27 @@
+thead {
+  background-color: #1314193b;
+}
+
+tr {
+  padding: 10px 0px 2px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#ExpenseData {
+  align-items: flex-start;
+}
+
+th {
+  font-size: 14px;
+  text-align:left;
+  width: 120px;
+  margin-bottom: 12px;
+}
+
+td {
+  font-size: 12px;
+  text-align: left;
+  width: 120px;
+}

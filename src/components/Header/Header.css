@@ -4,11 +4,29 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color:#3c4045;
-	box-shadow:inset 1px 0px 1px 1px #1e2128b2;
+  background-color:#15171c;
   color:aliceblue;
   width: 100vw;
-  height: 72px;
+  height: 84px;
+}
+
+.User {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.AppTitle {
+  width: 200px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#walletHalf {
+  font-weight: 600;
 }
 
 .HeaderTitle {
@@ -18,10 +36,11 @@ header {
 }
 
 .TotalContainer {
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .TotalExpenses {

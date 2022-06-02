@@ -52,7 +52,7 @@ class Login extends Component {
         <h2>Login</h2>
         <form className="Form">
           <label htmlFor="EmailInput">
-            <p>Email:</p>
+            <p>Email</p>
             <input
               id="EmailInput"
               type="email"
@@ -67,7 +67,7 @@ class Login extends Component {
           </label>
           <br />
           <label htmlFor="PasswordInput">
-            <p>Password:</p>
+            <p>Password</p>
             <input
               id="PasswordInput"
               type="password"

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import expenseAdding from '../../helpers/ExpenseAdding';
+import './ExpensesTable.css'
 
 class ExpensesTable extends Component {
   render() {
@@ -18,12 +19,11 @@ class ExpensesTable extends Component {
             <th>Câmbio utilizado</th>
             <th>Valor convertido</th>
             <th>Moeda de conversão</th>
-            <th>Editar/Excluir</th>
           </tr>
         </thead>
         <tbody>
           {expenses.map((e) => (
-            <tr key={ e.id }>
+            <tr id="ExpenseData" key={ e.id }>
               <td>{ e.description }</td>
               <td>{ e.tag }</td>
               <td>{ e.method }</td>
