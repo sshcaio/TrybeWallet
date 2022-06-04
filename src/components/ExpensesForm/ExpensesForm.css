@@ -1,5 +1,7 @@
 .TopWallet {
-  width: 100vw;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 
 .ExpenseForm {

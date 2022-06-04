@@ -2,18 +2,21 @@ body {
   box-sizing: border-box;
   background-color: #1e2128;
   color: aliceblue;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
   height: 100vh;
   width: 100vw;
 }
 
 #root {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .App {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -141,8 +144,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .TopWallet {
