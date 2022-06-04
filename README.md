@@ -8,7 +8,7 @@ This Front-End project aims to develop a wallet to keep control of expenses in d
 
 <details>
  <summary>PT-BR</summary>
- Esse projeto Front-End visa desenvolver uma cateira para manter controle das despesas em diferentes moedas. Ela usa o Real como base, e assim o usuário pode - gastando em outras moedas - automaticamente observar o quanto está gastando do seu dinheiro em Reais.
+ Esse projeto Front-End visa desenvolver uma carteira para manter controle das despesas em diferentes moedas. Ela usa o Real como base, e assim o usuário pode - gastando em outras moedas - automaticamente observar o quanto está gastando do seu dinheiro em Reais.
  
  * Visualise o total gasto em reais;
  * Visualise as despesas registradas em formato de tabela;
