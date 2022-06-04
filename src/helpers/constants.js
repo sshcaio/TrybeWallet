@@ -1,3 +1,3 @@
-export const firstTag = 'Alimentação';
-export const firstMethod = 'Dinheiro';
+export const firstTag = 'Food';
+export const firstMethod = 'Cash';
 export const firstCurrency = 'USD';

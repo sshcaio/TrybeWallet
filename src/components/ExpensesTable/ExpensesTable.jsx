@@ -11,14 +11,14 @@ class ExpensesTable extends Component {
       <table>
         <thead>
           <tr>
-            <th>Descrição</th>
+            <th>Description</th>
             <th>Tag</th>
-            <th>Método de pagamento</th>
-            <th>Valor</th>
-            <th>Moeda</th>
-            <th>Câmbio utilizado</th>
-            <th>Valor convertido</th>
-            <th>Moeda de conversão</th>
+            <th>Payment method</th>
+            <th>Value</th>
+            <th>Currency</th>
+            <th>Exchange rate</th>
+            <th>Exchanged value</th>
+            <th>Exchanged currency</th>
           </tr>
         </thead>
         <tbody>
@@ -31,7 +31,7 @@ class ExpensesTable extends Component {
               <td>{ e.exchangeRates[e.currency].name }</td>
               <td>{ (Number(e.exchangeRates[e.currency].ask)).toFixed(2) }</td>
               <td>{ expenseAdding(e, e.currency).toFixed(2) }</td>
-              <td>Real</td>
+              <td>Brazilian Real</td>
             </tr>
           ))}
         </tbody>

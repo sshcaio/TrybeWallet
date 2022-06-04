@@ -51,24 +51,25 @@ class ExpensesForm extends Component {
   render() {
     const { value, description, currency, method, tag } = this.state;
     const { currencies } = this.props;
-    const payment = [firstMethod, 'Cartão de crédito', 'Cartão de débito'];
-    const tagList = [firstTag, 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
+    const payment = [firstMethod, 'Credit Card', 'Debit Card'];
+    const tagList = [firstTag, 'Entertainment', 'Work', 'Transportation', 'Healthcare'];
     return (
       <section className="TopWallet">
         <form className="Form ExpenseForm">
             <label htmlFor="ExpenseValue">
-              <p>Valor</p>
+              <p>Value</p>
               <input
                 type="text"
                 name="value"
                 value={ value }
                 id="ExpenseValue"
                 onChange={ this.stateWrite }
+                autocomplete="off"
                 data-testid="value-input"
               />
             </label>
             <label className="CurrencySelect" htmlFor="CurrencySelect">
-              <p>Moeda</p>
+              <p>Currency</p>
               <select
                 name="currency"
                 value={ currency }
@@ -81,7 +82,7 @@ class ExpensesForm extends Component {
               </select>
             </label>
             <label className="PaymentMethod" htmlFor="PaymentMethod">
-            <p>Método de pagamento</p>
+            <p>Payment method</p>
               <select
                 name="method"
                 value={ method }
@@ -95,7 +96,7 @@ class ExpensesForm extends Component {
               </select>
             </label>
             <label className="ExpenseTag" htmlFor="ExpenseTag">
-              <p>Categoria</p>
+              <p>Tag</p>
               <select
                 name="tag"
                 value={ tag }
@@ -109,13 +110,14 @@ class ExpensesForm extends Component {
               </select>
             </label>
             <label htmlFor="ExpenseDescription">
-              <p>Descrição</p>
+              <p>Description</p>
               <input
                 type="text"
                 name="description"
                 value={ description }
                 id="ExpenseDescription"
                 onChange={ this.stateWrite }
+                autocomplete="off"
                 data-testid="description-input"
               />
             </label>
@@ -124,7 +126,7 @@ class ExpensesForm extends Component {
             id="SubmitExpense"
             onClick={ this.storeWrite }
           >
-            Adicionar despesa
+            Add expense
           </button>
         </form>
       </section>
