@@ -87,7 +87,7 @@ class Login extends Component {
             disabled={ disable }
             onClick={ this.saveButton }
           >
-            Entrar
+            Enter
           </button>
         </form>
       </div>
